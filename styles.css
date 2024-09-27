@@ -607,7 +607,43 @@ nav {
     flex-direction: column;
   }
 
-  /* Ensure that fonts scale well on all devices */
+  .subscribe__container .btn {
+    width: 100%;
+  }
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--secondary-color-light);
+  border: 1px solid var(--secondary-color);
+  color: var(--white);
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.form-group input::placeholder {
+  color: var(--text-light);
+}
+
+button[type="submit"] {
+  margin-top: 1.5rem;
+}
+
+/* Ensure that fonts scale well on all devices */
 html {
   font-size: 100%;
 }
@@ -775,11 +811,5 @@ html {
   .form-group select {
     font-size: 0.9rem;
     padding: 0.6rem;
-  }
-}
-
-
-  .subscribe__container .btn {
-    width: 100%;
   }
 }
