@@ -612,4 +612,204 @@ nav {
   }
 }
 
+/* Form Group */
+.form-group {
+  margin-bottom: 1.5rem;
+}
 
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--secondary-color-light);
+  border: 1px solid var(--secondary-color);
+  color: var(--white);
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.form-group input::placeholder {
+  color: var(--text-light);
+}
+
+button[type="submit"] {
+  margin-top: 1.5rem;
+}
+
+/* Ensure that fonts scale well on all devices */
+html {
+  font-size: 100%;
+}
+
+/* Adjustments for larger screens */
+@media only screen and (min-width: 901px) {
+  /* Any large screen adjustments go here */
+}
+
+/* Adjustments for tablets (width between 600px and 900px) */
+@media (max-width: 900px) {
+  .nav__links {
+    gap: 1.5rem;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats__container {
+    grid-template-columns: 1fr;
+  }
+
+  .stats__image {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .blog__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 1rem;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Adjustments for mobile screens (less than 600px) */
+@media (max-width: 600px) {
+  /* Header navigation adjustments */
+  nav {
+    position: fixed;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--black);
+    z-index: 99;
+  }
+
+  .nav__links {
+    position: absolute;
+    left: 0;
+    top: 68px;
+    padding: 2rem;
+    width: 100%;
+    flex-direction: column;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .nav__links.open {
+    transform: scaleY(1);
+  }
+
+  .nav__menu__btn {
+    display: block;
+  }
+
+  .header__container h1 {
+    margin-top: 4rem;
+    font-size: 3.5rem;
+  }
+
+  .stats__image {
+    grid-template-columns: 1fr;
+  }
+
+  .blog__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subscribe__container form {
+    flex-direction: column;
+  }
+
+  .subscribe__container .btn {
+    width: 100%;
+  }
+
+  /* Adjust container padding for smaller screens */
+  .section__container {
+    padding: 2rem 1rem;
+  }
+
+  .about__grid,
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  /* Form styles for smaller screens */
+  .form-group input,
+  .form-group select,
+  button[type="submit"] {
+    font-size: 1rem;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+
+/* Button hover effect refinement */
+.btn:hover span {
+  transform: translateX(3px); /* Make the hover effect less aggressive */
+}
+
+/* Additional small screen refinements */
+@media (max-width: 480px) {
+  /* Smaller fonts for mobile */
+  .section__header {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .section__subheader {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .header__container h1 {
+    font-size: 2.5rem;
+  }
+
+  .about__grid {
+    gap: 1.5rem;
+  }
+
+  .blog__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .footer__container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  /* Full-width buttons for mobile */
+  .subscribe__container form,
+  .subscribe__container .btn {
+    width: 100%;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
